@@ -159,7 +159,10 @@ exports <<<
         case 'then'
             @fset 'for' false
             @fset 'to' false
-        case 'catch' 'function'
+        case 'def'
+            tag = \FUNCTION
+            id = ''
+        case 'catch' 'function' 
             id = ''
         case 'in' 'of'
             if @fget 'for'
@@ -1325,7 +1328,7 @@ KEYWORDS_UNUSED =
 
 JS_KEYWORDS = KEYWORDS_SHARED ++ KEYWORDS_UNUSED
 
-LS_KEYWORDS = <[ xor match where ]>
+LS_KEYWORDS = <[ xor match where def ]>
 
 ##### Regexes
 # Some of these are given `g` flag and made sure to match empty string
