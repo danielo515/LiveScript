@@ -801,3 +801,9 @@ l = (!!@x) -> x
 obj = {-x}
 l.call obj, 'hello'
 eq true obj.x
+
+# def is an alias to function
+def dummy a
+  a
+
+eq "Identity" dummy "Identity"
